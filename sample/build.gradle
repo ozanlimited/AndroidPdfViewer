@@ -1,26 +1,41 @@
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+}
 
 android {
-    compileSdkVersion 29
+    namespace "com.github.barteksc.sample"
 
-    defaultConfig {
-        applicationId "com.pdfviewer"
-        minSdkVersion 16
-        targetSdkVersion 29
-        versionCode 3
-        versionName "3.0.0"
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
-    buildTypes {
-        release {
-            minifyEnabled true
-            debuggable true
-            proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+    compileSdk rootProject.tools.compileSdk
+
+    defaultConfig {
+        minSdk rootProject.tools.minSdk
+        targetSdk rootProject.tools.targetSdk
+
+        versionCode 7
+        versionName "${rootProject.tools.versionName}"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["androidManifestFile": "$projectDir/src/main/AndroidManifest.xml".toString()]
+            }
         }
     }
 }
 
 dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.1'
     implementation project(':android-pdf-viewer')
-    implementation 'androidx.appcompat:appcompat:1.1.0'
+//    implementation 'com.github.lion1988dev:AndroidPdfViewer:3.2.1'
+
+    implementation 'org.androidannotations:androidannotations-api:4.8.0'
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.22"))
+
+    annotationProcessor "org.androidannotations:androidannotations:4.8.0"
+
+
 }

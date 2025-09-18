@@ -1,18 +1,14 @@
-buildscript {
-    repositories {
-        google()
-        jcenter()
-        maven { url 'https://jitpack.io' }
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.1'
-    }
+plugins {
+    id 'com.android.application' version '8.11.1' apply false
+    id 'com.android.library' version '8.11.1' apply false
 }
 
-allprojects {
-    repositories {
-        google()
-        jcenter()
-        maven { url 'https://jitpack.io' }
-    }
+ext {
+    tools = [
+            minSdk      : 21,
+            targetSdk   : 35,
+            compileSdk  : 35,
+            versionCode: 7,
+            versionName: '3.2.8'
+    ]
 }

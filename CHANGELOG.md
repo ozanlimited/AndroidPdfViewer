@@ -1,3 +1,27 @@
+## 3.2.8 (2025-08-19)
+* upgrade gradle plugin
+* Update [PdfiumAndroid library](https://github.com/marain87/PdfiumAndroid) to 1.9.8
+
+## 3.2.7 (2025-07-07)
+* Update [PdfiumAndroid library](https://github.com/marain87/PdfiumAndroid) to 1.9.7
+
+## 3.2.6 (2025-06-03)
+* upgrade gradle plugin and ndk to support for 16KB Page Size
+* Update [PdfiumAndroid library](https://github.com/marain87/PdfiumAndroid) to 1.9.6
+
+## 3.2.4 (2024-03-19)
+* Update [PdfiumAndroid library](https://github.com/lion1988dev/PdfiumAndroid) to 1.9.4
+
+## 3.2.3 (2024-03-18)
+* Change minimum SDK version to 21
+* Update [PdfiumAndroid library](https://github.com/lion1988dev/PdfiumAndroid) to 1.9.3
+
+## 3.2.1 (2024-03-10)
+* Change minimum SDK version to 19
+* Drop MIPS support
+* Update to Androidx
+* Switch pdfium-android to a [fork](https://github.com/lion1988dev/PdfiumAndroid) so we can disable jetifier
+
 ## 3.2.0-beta.1 (2019-08-18)
 * Merge PR #714 with optimized page load
 * Merge PR #776 with fix for max & min zoom level
